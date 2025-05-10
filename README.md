@@ -76,18 +76,7 @@ dt.predict([[0.5,0.8,9,260,6,0,1,2]])
 ```
 
 ## Output:
-### df.head() and df.isnull().sum()
-![Screenshot 2025-04-27 114914](https://github.com/user-attachments/assets/56a8dfa4-cd4f-435b-bb28-594f870c2e63)
-### df.describe()
-![Screenshot 2025-04-27 114934](https://github.com/user-attachments/assets/0685d091-a2cc-4335-973f-c83547b3456f)
-### df.info() and Value counts
-![Screenshot 2025-04-27 114945](https://github.com/user-attachments/assets/ad1d5258-322b-4f05-9eef-d0ec50e86005)
-### df.head()
-![Screenshot 2025-04-27 115003](https://github.com/user-attachments/assets/c4d39916-5bff-4a3c-a92a-d6193b363730)
-### Value of x.head() and y
-![Screenshot 2025-04-27 115003](https://github.com/user-attachments/assets/66bc82ad-9915-4e83-8950-0f6560a0db23)
-### Value of Accuracy,Confusion_matrix and data prediction
-![Screenshot 2025-04-27 120512](https://github.com/user-attachments/assets/9701d0bf-3034-438b-ab2a-c6cf2333e036)
+
 
 
 
