@@ -76,8 +76,6 @@ dt.predict([[0.5,0.8,9,260,6,0,1,2]])
 ```
 
 ## Output:
-### Value of df
-![Screenshot 2025-04-27 114859](https://github.com/user-attachments/assets/759ee2e4-a7b6-485a-8456-1088e8d504d7)
 ### df.head() and df.isnull().sum()
 ![Screenshot 2025-04-27 114914](https://github.com/user-attachments/assets/56a8dfa4-cd4f-435b-bb28-594f870c2e63)
 ### df.describe()
