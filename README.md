@@ -7,75 +7,90 @@ To write a program to implement the Decision Tree Classifier Model for Predictin
 1. Hardware – PCs
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
-## Algorithm
-1.Load the Employee.csv dataset and display the first few rows.
-
-2.Check dataset structure and find any missing values.
-
-3.Display the count of employees who left vs stayed.
-
-4.Encode the "salary" column using LabelEncoder to convert it into numeric values.
-
-5.Define features x with selected columns and target y as the "left" column.
-
-6.Split the data into training and testing sets (80% train, 20% test).
-
-7.Create and train a DecisionTreeClassifier model using the training data.
-
-8.Predict the target values using the test data.
-
-9.Evaluate the model’s accuracy using accuracy score.
-
-10.Predict whether a new employee with specific features will leave or not. 
+## Algorithm:
+1. Import Libraries and Load Dataset.
+2. Preprocess the Data.
+3. Split the Dataset.
+4. Train the Decision Tree Classifier.
+5. Make Predictions and Evaluate the Model
 
 ## Program:
 ```
-/*
-Program to implement the Decision Tree Classifier Model for Predicting Employee Churn.
-Developed by: AADITHYAN R
-RegisterNumber: 212222230001 
-*/
+Developed by:AADITHYAN R
+RegisterNumber:  212222230001
 
+```
+~~~
 import pandas as pd
-data = pd.read_csv("Employee.csv")
+data=pd.read_csv("Employee.csv")
 data
+~~~
+## Output:
+![image](https://github.com/user-attachments/assets/6f475207-c462-45a8-878e-7195adf4ea84)
 
-data.head()
-
-data.isnull().sum()
-
+~~~
 data["left"].value_counts()
+~~~
+## Output:
+![image](https://github.com/user-attachments/assets/3b93c134-c3e7-4f90-8749-20e9faa21c90)
 
+~~~
 from sklearn.preprocessing import LabelEncoder
-le = LabelEncoder()
-
-data["salary"] = le.fit_transform(data["salary"])
+le=LabelEncoder()
+~~~
 data.head()
 
-x=data[["satisfaction_level","last_evaluation","number_project","average_montly_hours","time_spend_company","Work_accident","promotion_last_5years","salary"]]
+## Output:
+![image](https://github.com/user-attachments/assets/2b6e8188-cdc4-4d81-bc8c-cda6e4c1edcb)
+
+~~~
+data["salary"]=le.fit_transform(data["salary"])
+data
+~~~
+## Output:
+![image](https://github.com/user-attachments/assets/4030bd82-eef4-460f-8fb2-749127c196de)
+
+~~~
+x=data[["satisfaction_level","last_evaluation","number_project","time_spend_company"]]
 x.head()
+~~~
+## Output:
+![image](https://github.com/user-attachments/assets/0dabfd52-bcf5-45db-b36f-60cb19e28ef2)
 
+~~~
 y=data["left"]
-y.head()
-
+~~~
+~~~
 from sklearn.model_selection import train_test_split
-x_train, x_test, y_train, y_test = train_test_split(x,y, test_size = 0.2, random_state = 100)
-
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=100)
+~~~
+~~~
 from sklearn.tree import DecisionTreeClassifier
-dt=DecisionTreeClassifier (criterion="entropy")
+dt=DecisionTreeClassifier(criterion="entropy")
 dt.fit(x_train,y_train)
 y_pred=dt.predict(x_test)
-
+~~~
+~~~
 from sklearn import metrics
 accuracy=metrics.accuracy_score(y_test,y_pred)
 accuracy
-
-dt.predict([[0.5,0.8,9,260,6,0,1,2]])
-
-
-```
-
+~~~
 ## Output:
+![image](https://github.com/user-attachments/assets/d766fc19-b108-472a-8d56-04976fe61c17)
+~~~
+dt.predict([[0.5,0.8,9,260,6,0,1,2]])
+~~~
+## Output:
+![image](https://github.com/user-attachments/assets/57c1c903-7ae4-45f5-9cf8-4b2c2f341d4a)
+
+
+
+
+
+
+
+
+
 
 
 
